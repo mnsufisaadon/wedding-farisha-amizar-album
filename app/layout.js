@@ -1,7 +1,7 @@
-import { Inter } from "next/font/google";
+import { Kaushan_Script } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Kaushan_Script({ weight: '400',subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
