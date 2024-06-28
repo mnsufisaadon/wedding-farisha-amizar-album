@@ -10,9 +10,9 @@ export default function Home() {
   const [isShowing, setIsShowing] = useState(true)
   const [audio, setAudio] = useState(null)
 
-  useEffect(() => {
-    setAudio(new Audio(song))
-  }, [audio])
+  // useEffect(() => {
+  //   setAudio(new Audio(song))
+  // }, [audio])
 
 
   function play () {
