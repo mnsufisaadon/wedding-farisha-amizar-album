@@ -10,9 +10,9 @@ export default function Home() {
   const [isShowing, setIsShowing] = useState(true)
   const [audio, setAudio] = useState(null)
 
-  // useEffect(() => {
-  //   setAudio(new Audio(song))
-  // }, [audio])
+  useEffect(() => {
+    setAudio(new Audio(song))
+  }, [])
 
 
   function play () {
@@ -26,7 +26,7 @@ export default function Home() {
   return (
       <main className="bg-black relative">
         <div className="relative max-w-[800px] h-screen m-auto bg-white p-[32px] text-center flex items-center justify-center">
-            <div className="pb-[48px]">
+            <div className="pb-[48px] absolute z-10">
               <h2 className="text-2xl mb-6">Majlis Perkahwinan</h2>
               <h1 className="mb-[24px] text-[60px] leading-[5rem]">Farisha<br/>&<br/>Amizar</h1>
               <div className="mb-[48px]">
@@ -38,7 +38,7 @@ export default function Home() {
                 <button className="text-lg animate-bounce p-2 bg-[#FFC7ED] rounded-md min-w-[150px] shadow-md hover:bg-[#FFC7ED60] hover:border hover:border-[#FFC7ED]  transition-all">Upload</button>
               </Link>
             </div>
-            <div className="absolute top-0 right-0">
+            <div className="absolute top-0 right-0 z-0">
               <Image
                 src="/top.png"
                 alt="top"
@@ -48,7 +48,7 @@ export default function Home() {
                 priority
               />
             </div>
-            <div className="absolute bottom-0 left-0">
+            <div className="absolute bottom-0 left-0 z-0">
               <Image
                 src="/bottom.png"
                 alt="top"
@@ -60,7 +60,7 @@ export default function Home() {
             </div>
         </div>
         {isShowing && (
-          <div className="bg-[#00000090] fixed left-0 top-0 h-screen w-full flex justify-center items-center">
+          <div className="bg-[#00000090] fixed z-20 left-0 top-0 h-screen w-full flex justify-center items-center">
             <div className="bg-white p-5 rounded-md text-center w-[300px]">
               <p className="mb-4 text-lg">You have been invited to the<br />Farisha & Amizar Wedding's Album</p>
               <button className="text-lg p-2 bg-[#FFC7ED] rounded-md min-w-[150px] shadow-md hover:bg-[#FFC7ED60] hover:border hover:border-[#FFC7ED]  transition-all" onClick={play}>Proceed</button>
