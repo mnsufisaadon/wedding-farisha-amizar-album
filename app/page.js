@@ -12,7 +12,7 @@ export default function Home() {
 
   useEffect(() => {
     setAudio(new Audio(song))
-  }, [song])
+  }, [audio])
 
 
   function play () {
