@@ -24,7 +24,7 @@ export default function Home() {
 
 
   return (
-      <main className="bg-black relative">
+      <main className="bg-black relative text-black">
         <div className="relative max-w-[800px] h-screen m-auto bg-white p-[32px] text-center flex items-center justify-center">
             <div className="pb-[48px] absolute z-10">
               <h2 className="text-2xl mb-6">Majlis Perkahwinan</h2>
